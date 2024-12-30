@@ -7,16 +7,9 @@ import Swal from "sweetalert2";
 
 
 function Dashboard() {
-    const [employees,setEmployees]=useState();
-    const [selectedEmployee,setSelectedEmployee]=useState(null);
     const [isAdding,setIsAdding]=useState(false);
     const [isEditing,setIsEditing]=useState(false);
-    const handleEdit = () =>{
 
-    }
-    const handleDelete = () =>{
-
-    }
   return (
     <>
       {/* list */}
@@ -26,9 +19,6 @@ function Dashboard() {
         setIsAdding={setIsAdding} 
         />
         <List
-                  /* employees={employees} 
-                  handleEdit={handleEdit}
-                  handleDelete={handleDelete} */
                   setIsEditing={setIsEditing}  
                   />
         </>
@@ -37,9 +27,6 @@ function Dashboard() {
       {isAdding && (
         <>
         <Add
-        setEmployees={setEmployees}
-        employees={employees}
-        isAdding={isAdding}
         setIsAdding={setIsAdding} />
         </>
       )}
@@ -47,10 +34,6 @@ function Dashboard() {
       {isEditing && (
         <>
         <Edit
-        employees={employees}
-        setEmployees={setEmployees}
-        selectedEmployee={selectedEmployee}
-        isEditing={isEditing}
         setIsEditing={setIsEditing}
         />
         </>
