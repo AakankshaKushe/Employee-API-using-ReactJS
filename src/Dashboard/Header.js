@@ -1,17 +1,16 @@
 import React from "react"
 
 
-function Header({setIsAdding}){
+function Header(){
+  
   return (
     <>
-     <div className="container">
-      <header>
-        <h1>Employee API</h1>
-        <div>
-          <button onClick={() => setIsAdding(true)} className="round-button">Add Employee</button>
-        </div>
+      <header style={{backgroundColor:"black"}}>
+      <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <h1 className="" style={{color:"white"}}>Employee API</h1>
+        </nav>
       </header>
-      </div>
+      <br/><br/>
     </>
   )
 };
